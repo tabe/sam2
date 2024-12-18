@@ -8,6 +8,8 @@ COPY package.json ./
 COPY yarn.lock ./
 
 # Install dependencies
+RUN yarn config set proxy http://proxy.cc.yamaguchi-u.ac.jp:8080
+RUN yarn config set https-proxy http://proxy.cc.yamaguchi-u.ac.jp:8080
 RUN yarn install --frozen-lockfile
 
 # Copy source code
