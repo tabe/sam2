@@ -14,6 +14,12 @@ ENV PYTHONUNBUFFERED=1
 ENV SAM2_BUILD_CUDA=0
 ENV MODEL_SIZE=${MODEL_SIZE}
 
+# For Yamaguchi University's proxy
+ENV HTTP_PROXY http://proxy.cc.yamaguchi-u.ac.jp:8080
+ENV http_proxy http://proxy.cc.yamaguchi-u.ac.jp:8080
+ENV HTTPS_PROXY http://proxy.cc.yamaguchi-u.ac.jp:8080
+ENV https_proxy http://proxy.cc.yamaguchi-u.ac.jp:8080
+
 # Install system requirements
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg \
